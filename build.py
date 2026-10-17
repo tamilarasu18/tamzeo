@@ -14,8 +14,8 @@ UPDATED = "17 October 2026"
 PAY_URL = "https://pages.razorpay.com/tamzeo-shorts-kit"
 CONTACT = {
     "email": "tamilarasum74@gmail.com",
-    "phone": ""                      # user chose not to show a phone (2026-10-17),
-    "address": "India"              # TODO: user to give city + state,
+    "phone": "",            # user chose not to show a phone (2026-10-17)
+    "address": "India",     # TODO: user to give city + state
 }
 
 CSS = """
