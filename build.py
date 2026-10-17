@@ -183,12 +183,34 @@ DELIVERY = f"""<div class="legal">
 <p>{BRAND} sells digital products only. Nothing is shipped physically.</p>
 <p>After a successful payment you are taken straight to the download page for your file. If the page does not open, or you lose the link, contact us with your payment ID through the <a href="contact.html">Contact</a> page and we will send the link by email within 1 working day.</p></div>"""
 
+APP = f"""<div class="legal">
+<p class="eyebrow">Tamzeo Shorts Autopilot</p><h1>The YouTube uploader</h1>
+<p class="lead">Tamzeo Shorts Autopilot is a private automation tool that runs on its owner's own computer. It builds short videos and uploads them to the owner's own YouTube channel through the YouTube Data API.</p>
+<h2>What it does with your Google account</h2>
+<ul><li>Uploads videos you made with it to your own YouTube channel, live or scheduled.</li>
+<li>Sets each video's title, description, tags, thumbnail and publish time.</li>
+<li>Reads your channel's own video list and basic statistics so it can report what was published.</li></ul>
+<p>It does not read, change or delete anything else, and it does not act on any other channel.</p>
+<p>See the <a href="app-privacy.html">privacy policy for the uploader</a>. Questions: <a href="contact.html">Contact</a>.</p></div>"""
+
+APP_PRIVACY = f"""<div class="legal">
+<h1>Privacy Policy: Tamzeo Shorts Autopilot</h1><p class="date">Last updated: {UPDATED}</p>
+<p>This policy covers the Tamzeo Shorts Autopilot uploader and how it uses Google user data. It is operated by {OWNER}, India.</p>
+<h2>Google user data it accesses</h2><p>With your permission (OAuth scopes <code>youtube.upload</code> and <code>youtube</code>), the app uploads videos to your YouTube channel, sets their metadata and thumbnails, and reads your own channel's video list and statistics.</p>
+<h2>How the data is used</h2><p>Only to publish the videos you create with the app and to report back what was published. Nothing is used for advertising, profiling or any other purpose.</p>
+<h2>Storage</h2><p>The OAuth refresh token is stored only on your own computer, in your environment variables. No Google user data is sent to or stored on any Tamzeo server; there is none.</p>
+<h2>Sharing</h2><p>Google user data is not sold, shared or transferred to anyone. The app's use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements.</p>
+<h2>Revoking access</h2><p>You can remove the app's access at any time at myaccount.google.com/permissions. Deleting the stored token from your computer also stops it.</p>
+<h2>Contact</h2><p>{CONTACT['email']}</p></div>"""
+
 BODIES = {"index.html": (INDEX, "Home", "Tamzeo makes free-tool automation kits for YouTube creators."),
           "contact.html": (CONTACT_HTML, "Contact", "Contact Tamzeo."),
           "terms.html": (TERMS, "Terms and Conditions", "Tamzeo terms and conditions."),
           "privacy.html": (PRIVACY, "Privacy Policy", "Tamzeo privacy policy."),
           "refund.html": (REFUND, "Refund and Cancellation Policy", "Tamzeo refund and cancellation policy."),
-          "delivery.html": (DELIVERY, "Shipping and Delivery Policy", "Tamzeo shipping and delivery policy.")}
+          "delivery.html": (DELIVERY, "Shipping and Delivery Policy", "Tamzeo shipping and delivery policy."),
+          "app.html": (APP, "Shorts Autopilot uploader", "Tamzeo Shorts Autopilot, the YouTube uploader."),
+          "app-privacy.html": (APP_PRIVACY, "Privacy Policy: Shorts Autopilot", "How Tamzeo Shorts Autopilot uses Google user data.")}
 
 if __name__ == "__main__":
     for fname, (body, title, desc) in BODIES.items():
