@@ -12,6 +12,8 @@ BRAND = "Tamzeo"
 OWNER = "Muniraj Tamilarasu"            # legal name on the PAN, as Razorpay requires
 UPDATED = "17 October 2026"
 PAY_URL = "https://pages.razorpay.com/tamzeo-shorts-kit"
+LAUNCHED = False   # 2026-10-17 user: show "Launching soon" until Razorpay approves and the payment page is live
+ORDER_MAIL = "mailto:tamilarasum74@gmail.com?subject=Order%3A%20Zero%20Budget%20Shorts%20Autopilot%20Kit"
 CONTACT = {
     "email": "tamilarasum74@gmail.com",
     "phone": "",            # user chose not to show a phone (2026-10-17)
@@ -95,7 +97,7 @@ INDEX = f"""
 <p class="eyebrow">Tamzeo · Digital tools</p>
 <h1>Tools that do the work.<br>Built on free software.</h1>
 <p class="lead">Small, sharp products for creators. No subscriptions to stack, no paid APIs. You run them on your own computer.</p>
-<div class="cta"><a class="btn solid" href="{PAY_URL}">Get the Shorts Kit · ₹499</a><a class="btn ghost" href="#kit">See what's inside</a></div>
+<div class="cta">{f'<a class="btn solid" href="{PAY_URL}">Get the Shorts Kit · ₹499</a>' if LAUNCHED else f'<a class="btn solid" href="{ORDER_MAIL}">Launching soon · email to order</a>'}<a class="btn ghost" href="#kit">See what's inside</a></div>
 </div></section>
 
 <section class="block" id="kit"><div class="wrap split">
@@ -125,8 +127,8 @@ INDEX = f"""
 <ul class="list"><li>Full Python source code, MIT licence</li><li>The Claude Code skill that runs the daily routine</li><li>A 7-page setup guide, empty folder to first video</li><li>An example script and a troubleshooting table</li></ul>
 <ul class="list"><li>A Mac or Linux computer</li><li>A paid Claude plan with Claude Code</li><li>A YouTube channel</li><li>Everything else the kit uses is free</li></ul>
 </div>
-<div class="price"><div><div class="amt">₹499<small>one-time</small></div><p>Digital download. You're taken to the file right after payment.</p></div>
-<a class="btn solid" href="{PAY_URL}">Buy now</a></div>
+<div class="price"><div><div class="amt">₹499<small>one-time</small></div><p>Digital download. {"You're taken to the file right after payment." if LAUNCHED else "Online checkout opens in the next few days. Email us to order before then."}</p></div>
+{f'<a class="btn solid" href="{PAY_URL}">Buy now</a>' if LAUNCHED else f'<a class="btn solid" href="{ORDER_MAIL}">Launching soon</a>'}</div>
 <p class="fine">This kit removes production work. It does not promise views, subscribers or income. Not tested on Windows.</p>
 </div></section>
 
