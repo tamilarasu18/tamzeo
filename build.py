@@ -12,7 +12,7 @@ BRAND = "Tamzeo"
 OWNER = "Muniraj Tamilarasu"            # legal name on the PAN, as Razorpay requires
 UPDATED = "17 October 2026"
 PAY_URL = "https://pages.razorpay.com/tamzeo-shorts-kit"
-LAUNCHED = False   # 2026-10-17 user: show "Launching soon" until Razorpay approves and the payment page is live
+LAUNCHED = True    # 2026-10-18: Razorpay payment page live at pages.razorpay.com/tamzeo-shorts-kit
 ORDER_MAIL = "mailto:tamilarasum74@gmail.com?subject=Order%3A%20Zero%20Budget%20Shorts%20Autopilot%20Kit"
 CONTACT = {
     "email": "tamilarasum74@gmail.com",
