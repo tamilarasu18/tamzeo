@@ -29,7 +29,7 @@ CONTACT = {
 
 CSS = """
 :root{--bg:#000;--bg2:#0a0a0a;--line:#1f1f1f;--line2:#2e2e2e;--text:#fafafa;--muted:#9a9a9a;--dim:#6b6b6b}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
+*{box-sizing:border-box}html{scroll-behavior:smooth}.contact div,.legal,.card,.prod .meta{min-width:0;overflow-wrap:anywhere}
 html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:var(--text);text-decoration-color:var(--line2);text-underline-offset:3px}a:hover{text-decoration-color:var(--text)}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
